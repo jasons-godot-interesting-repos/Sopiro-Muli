@@ -4,6 +4,18 @@
 //LICENSE:  You can use this in ANY project, commercial or otherwise.
 
 
+/**
+ABOUT:   
+
+working, with small wrapper to allow passing Nodes in, instead of indexes.
+
+Note: I use this inside my big csharp framework, so there are some calls to minor helper functions.  
+You'll need to replace them to get things building but they are all minor changes.   
+
+example:   `__.Assert()` replace with `Debug.Assert()`
+
+**/
+
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
