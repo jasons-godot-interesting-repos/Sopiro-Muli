@@ -1,3 +1,29 @@
+# THIS REPO IS A GODOT 4.3 CSHARP PORT OF SOPIRO'S AABB_TREE
+
+**See the `AabbTree.cs` in the root folder.   everything else is Sopiro's Multi repo, where the original cpp code is from.**
+
+## why did I port this to csharp?
+
+a c# implementation of this guy's Bounding Volume Hierarchy (BVH) https://github.com/Sopiro/DynamicBVH 
+
+BVH has been around for a pretty long time, but over the last decade or so, it seems to have come out on top, choice wise, for game spatial partitions.  Probably because there's more info/analysis/comparison of different options over time, and this one's benefits make it well suited to general-purpose game spatial partitions  (better than sphere trees, quad trees, grids generally speaking).   Godot actually uses BVH for it's spatial partitioning already: https://github.com/godotengine/godot/blob/master/core/math/bvh.h  and it might have ben better for me to port that to csharp instead, but as it's used in a "real game engine" it has a lot of complexity added to it that I didn't want to sift through on my first try.
+
+speaking of first tries, I originally ported this Unity BVH to godot, thinking that porting a csharp would save me time.   https://github.com/rossborchers/UnityBoundingVolumeHeirachy  alas, it seemed to be quite a waste: I got it "working" but in my first tests (putting items in a row, like the above pic) it fails miserably, with each node on the tree having the same bounding box as the root node.   Maybe i could have spent a few hours to figure it out, but a number of factors (suspiciously complex code mostly) lead me to try porting a cpp one.   The unity port took about half day, the cpp port took a full day.
+
+for why I "need" this:  I don't use scenes, so need a way to track constructs, and my (spaceship building/combat) game is going to need a lot of raycasting, and the godot raycasting solution is actually very weak:  https://sampruden.github.io/posts/godot-is-not-the-new-unity/  so having a functional csharp spatial partition should allow me much greater performance and future optimization potential (like parallel queries) than the built-in system.
+
+if you want to know the basics of a BVH, see https://en.wikipedia.org/wiki/Bounding_volume_hierarchy  and here's an interactive demo by the guy I ended up porting:  https://sopiro.github.io/DynamicBVH/
+
+## screenshot of it with some visualizations care of [DD3D](https://dd3d.dmitriysalnikov.ru/docs/1.4.1/index.html)
+
+![image](https://github.com/user-attachments/assets/8e7dfcfe-8dfb-4b36-81a2-95de5fbafbf1)
+
+
+
+
+
+# Sopiro's original readme below
+
 ![logo](.github/logo.gif)
 
 # Muli
