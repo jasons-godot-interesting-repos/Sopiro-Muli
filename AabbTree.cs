@@ -1,4 +1,10 @@
-﻿using System;
+//LICENSE:  This code (AabbTree.cs) is made available under the MPL-2.0
+//LICENSE:  https://www.tldrlegal.com/license/mozilla-public-license-2-0-mpl-2
+//LICENSE:  Summary: If you make changes to THIS CODE, the changes must be made public.
+//LICENSE:  You can use this in ANY project, commercial or otherwise.
+
+
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
