@@ -2,10 +2,11 @@
 //LICENSE:  https://www.tldrlegal.com/license/mozilla-public-license-2-0-mpl-2
 //LICENSE:  Summary: If you make changes to THIS CODE, the changes must be made public.
 //LICENSE:  You can use this in ANY project, commercial or otherwise.
-
+//AUTHOR: By JasonS Aat Novaleaf Do0tC0m.  
+//WHAT: Port of Spoiro's Aabb_Tree to csharp.
 
 /**
-ABOUT:   
+NOTES:   
 
 working, with small wrapper to allow passing Nodes in, instead of indexes.
 
